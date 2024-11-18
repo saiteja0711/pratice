@@ -8,7 +8,7 @@ formData.addEventListener('submit', async function(event) {
     const email = document.getElementById('email').value.trim();
     const age = parseInt(document.getElementById('age').value.trim(), 10);
     const mobile = document.getElementById('mobile').value.trim();
-    const password = document.getElementById('password').value;
+    const password = document.getElementById('password').value.trim();
 
    
     if (username === "" || email === "" || isNaN(age) || mobile === "" || password === "") {
@@ -49,7 +49,7 @@ formData.addEventListener('submit', async function(event) {
         const response = await fetch('http://localhost:4502/bin/signIn', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
                 
     },
             body: JSON.stringify(formData)
