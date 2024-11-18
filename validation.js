@@ -52,7 +52,7 @@ formData.addEventListener('submit', async function(event) {
                 'Content-Type': 'application/x-www-form-urlencoded',
                 
     },
-            body: JSON.stringify(formData)
+            body: formData
         });
 
        
